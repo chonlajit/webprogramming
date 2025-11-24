@@ -7,8 +7,8 @@ export default function Home() {
     return (
         <div>
            <header className="banner-header">
-            <Link href="./" className="title">LAP PROGRAMMING</Link>
-        </header>
+                <Link href="./" className="title">LAP PROGRAMMING</Link>
+            </header>
             <h1>{str}</h1>
             <input type ="text" onChange ={(text) => setStr (text.target.value)}></input>
         </div>

@@ -7,9 +7,9 @@ export default function Home() {
 
     return (
         <div>  
-          <header className="banner-header">
-            <Link href="./" className="title">LAP PROGRAMMING</Link>
-        </header>
+            <header className="banner-header">
+                <Link href="./" className="title">LAP PROGRAMMING</Link>
+            </header>
             <h1>{num}</h1>
             <button onClick={() => setnum(num + 1)}>add</button> 
             <button onClick={() => setnum(num - 1)}>del</button> 

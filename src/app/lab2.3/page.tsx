@@ -19,7 +19,6 @@ export default function Home() {
             <input type="text" value={str} onChange={e => setStr(e.target.value)} />
             <button onClick={onAdd}>add</button>
             <h1>SUMATION : {sum} </h1>
-            
         </div>
     );
 }
