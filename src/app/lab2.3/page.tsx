@@ -2,7 +2,7 @@
 import Link from "next/dist/client/link";
 import { useState } from "react";
 
-export default function Home() {
+export default function sumlist() {
      const [lset, setSet] = useState<number[]>([])
      const [num, setNum] = useState("")
      const [sum, setSum] = useState(0)

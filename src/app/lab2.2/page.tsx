@@ -2,7 +2,7 @@
 import Link from "next/dist/client/link";
 import { useState } from "react";
 
-export default function Home() {
+export default function onChange() {
     const [str , setStr] = useState("type here");
     return (
         <div>

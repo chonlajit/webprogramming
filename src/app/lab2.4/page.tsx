@@ -7,7 +7,7 @@ export interface Data{
     name: string, 
     price: string 
 } 
-export default function Home() {
+export default function addlist2() {
     const[lst , setList] = useState<Data[]>([]);
     const[value1 , setValue1] = useState("");
     const[value2 , setValue2] = useState("");

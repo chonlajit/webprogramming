@@ -1,29 +1,24 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
-export default function Home() {
-    const [stores, setStores] = useState([]); 
-    const getStores = async () => {
-        const res = await fetch('https://weblab.localapp.cc/store', {
-        method: 'GET',
-        headers: {'Content-Type': 'application/json'},
-        });
-        const resData = await res.json();
-        setStores(resData); 
-        console.log(resData);
-    }
+export default function Home() { 
+    const [stores, setStores] = useState<{name: string, address: string}[]>([]);
     useEffect(() => {
-        getStores();
-    }, []); 
-
+        fetchStores();
+    }, []);
+    const fetchStores = async () => {
+        const res = await fetch('https://weblab.localapp.cc/store');
+        const data = await res.json();
+        setStores(data);
+    }
     return (
         <div>
             <header className="banner-header">
                 <Link href="/" className="title">LAP PROGRAMMING</Link>
             </header>
-            {stores.map(e => <div className="listmap">{e['name']} | {e['address']}</div>)}
+           {stores.map (e=> <div className="listmap">{e['name']} - {e['address']}</div>)}
         </div>
     );
 }
