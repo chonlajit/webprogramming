@@ -24,6 +24,8 @@ export default function Home() {
         <option value="/lab2.4">Lab 2.4</option>
         <option value="/lab3.1">Lab 3.1</option>
         <option value="/lab3.2">Lab 3.2</option>
+        <option value="/lab4.1">Lab 4.1</option>
+        <option value="/lab4.2">Lab 4.2</option>
       </select>
     </div>
   );
